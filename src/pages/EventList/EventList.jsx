@@ -4,7 +4,7 @@ import Navigation from "../../components/Navigation/Navigation.jsx";
 import "./EventList.css";
 const EventList = () => {
   const renderEventCards = () => {
-    return eventList.map(({ id, date, heading, location, img }) => {
+    return eventList.map(({ id, date, heading, location,price, img }) => {
       return (
         <EventCard
           key={id}
@@ -13,13 +13,14 @@ const EventList = () => {
           heading={heading}
           location={location}
           img={img}
+          price={price}
         />
       );
     });
   };
   return (
     <div>
-      <Navigation/>
+      <Navigation />
       <div className="event-list-wrapper">
         <div className="event-list">
           {eventList.length > 0 ? (

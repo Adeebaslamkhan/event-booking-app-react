@@ -12,7 +12,7 @@ const SearchEventList = ({monthYear})=>{
     })
 
     const renderEventCards =()=>{
-        return filteredEvents.map(({ id, date, heading, location, img })=>{
+        return filteredEvents.map(({ id, date, heading, location,price, img })=>{
             return(
                 <EventCard
                 key={id}
@@ -21,6 +21,7 @@ const SearchEventList = ({monthYear})=>{
                 heading={heading}
                 location={location}
                 img={img}
+                price={price}
                 />
             )
         })
