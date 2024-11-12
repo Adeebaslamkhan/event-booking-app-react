@@ -2,7 +2,16 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./EventCard.css";
 
-const EventCard = ({ id, heading, date, location, img,price, initialSeats }) => {
+const EventCard = ({
+  id,
+  heading,
+  date,
+  location,
+  img,
+  price,
+  category,
+  initialSeats,
+}) => {
   const { year, month } = date;
   const [availableSeats, setAvailableSeats] = useState(10);
   const [message, setMessage] = useState("");
@@ -15,7 +24,7 @@ const EventCard = ({ id, heading, date, location, img,price, initialSeats }) => 
       setMessage("The event is fully booked.");
     }
   };
-
+  console.log("id: ", id);
   return (
     <>
       <Link to={`/events/${id}`}>
@@ -23,12 +32,18 @@ const EventCard = ({ id, heading, date, location, img,price, initialSeats }) => 
           <div className="card-content">
             <h3>{heading}</h3>
             <p>
+              <span>Category: {category}</span>
+            </p>
+            <p>
               <span>Year: {year}</span>
               <span>Month: {month}</span>
             </p>
             <p>
               <span>{location}</span>
-              <span>{price}</span>
+              <span>Price:{price}</span>
+            </p>
+            <p>
+              <span>{}</span>
             </p>
           </div>
 

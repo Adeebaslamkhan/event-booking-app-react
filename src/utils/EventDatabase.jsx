@@ -1,28 +1,31 @@
 export const eventList = [
   {
+    category : "Comedy",
     id: 1,
-    heading: "Epic Comic Con",
-    date: { year: 2023, month: "July" },
-    location: "Mumbai, India",
+    heading: "Gaurav Kapoor",
+    date: { year: 2024, month: "December" },
+    location: "Bangalore, India",
     price: 1000,
     description:
-      "Experience the most anticipated gathering of comic enthusiasts! Epic Comic Con invites you to immerse yourself in a realm where heroes and villains collide. Unveil exclusive collectibles, join panels with renowned artists, and witness legendary cosplayers bring your favorite characters to life. Whether you're a seasoned comic collector or just starting your journey, this event guarantees an epic adventure!",
-    img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29taWNzfGVufDB8fDB8fHww",
+      "Come and enjoy the super relatable and super funny, Gaurav Kapoor in his live show. One of the funniest and most prolific stand-up acts in the country, Gaurav Kapoor`s Vlogs have created a fan base of their own. 1M+ on YouTube, 300K on Insta, an IMDB 8.2 rated special on Amazon Prime.His massive live shows and regular VLogs are making him a household name and proving that one can truly live his art if he is brutally honest. His journalism degree and retail job experience now seem like stories from another life but Gaurav claims he still remembers all the keyboard shortcuts.",
+    img: "https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-gaurav-kapoor-live-orion-mall-0-2024-9-27-t-5-8-22.jpg",
   },
   {
     id: 2,
-    heading: "Fantasy Gaming Expo",
-    date: { year: 2024, month: "May" },
+    category : "Music",
+    heading: "Maroon 5 India 2024",
+    date: { year: 2024, month: "November" },
     location: "Delhi, India",
     price: 4000,
     description:
-      "Embark on a journey through fantastical realms at the Fantasy Gaming Expo! Delve into an immersive gaming experience that transcends reality. From tabletop adventures to cutting-edge VR simulations, this expo celebrates the essence of fantasy in gaming. Unleash your strategic prowess, forge alliances, and discover a world where every move shapes the destiny of kingdoms!",
-    img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "GRAMMY® Award-winning multiplatinum powerhouse Maroon 5, one of pop music’s most enduring artists and one of the 21st century’s biggest acts, makes its way to India for the first time ever!Coming off their current Las Vegas residency to Mumbai this December, the fans will experience an electrifying performance from one of the most enduring and successful bands of the 21st century, as Maroon 5 prepares to end the year on an unforgettable note. Maroon 5 has continued to captivate audiences world-over with their renowned high-energy performances and fans can expect nothing less in Mumbai. The concert will feature a setlist spanning their greatest hits and fan favourites, offering a once-in-a-lifetime experience. Including hits like ‘This Love’, ‘She Will Be Loved’, ‘Sugar’, ‘Girls Like You’ and more!The band’s incredible success includes a total of 50 Grammy and Billboard Music Award nominations and multi-platinum certifications in over 35 countries. Known for hits such as ‘Moves Like Jagger’, ‘Maps’ and ‘Payphone’, Maroon 5's catalogue of blockbuster tracks is eagerly anticipated by Indian fans.",
+    img: "https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-maroon-5-india-2024-1-2024-11-8-t-19-28-40.jpg",
   },
   {
     id: 3,
+    category : "Music",
     heading: "Cosplay Carnival",
-    date: { year: 2023, month: "September" },
+    date: { year: 2024, month: "December" },
     location: "Bangalore, India",
     price: 800,
     description:
@@ -31,8 +34,9 @@ export const eventList = [
   },
   {
     id: 4,
+    category : "Sci-Fi",
     heading: "Sci-Fi Symposium",
-    date: { year: 2024, month: "March" },
+    date: { year: 2025, month: "March" },
     location: "Hyderabad, India",
     price: 810,
     description:
@@ -41,8 +45,9 @@ export const eventList = [
   },
   {
     id: 5,
+    category : "Comedy",
     heading: "Epic Comic Con",
-    date: { year: 2023, month: "January" },
+    date: { year: 2025, month: "January" },
     location: "Mumbai, India",
     price: 900,
     description:

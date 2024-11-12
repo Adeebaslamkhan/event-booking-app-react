@@ -12,7 +12,7 @@ const SearchEventList = ({monthYear})=>{
     })
 
     const renderEventCards =()=>{
-        return filteredEvents.map(({ id, date, heading, location,price, img })=>{
+        return filteredEvents.map(({ id, date, heading, location,price, category, img })=>{
             return(
                 <EventCard
                 key={id}
@@ -22,6 +22,7 @@ const SearchEventList = ({monthYear})=>{
                 location={location}
                 img={img}
                 price={price}
+                category={category}
                 />
             )
         })
@@ -32,7 +33,7 @@ const SearchEventList = ({monthYear})=>{
          {filteredEvents.length>0 ?(
             renderEventCards()
          ):(
-            <p>No Events in the date</p>
+            <p></p>
          )}
        </>
     )

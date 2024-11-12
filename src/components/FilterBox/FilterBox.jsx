@@ -1,53 +1,46 @@
-import { useState,useEffect } from "react"
-import { generateDataOptions,months,years } from "../../utils/DataRender"
-import "./FilterBox.css"
-const FilterBox = ({getMonthYear})=>{
-    const [selectedMonth,setSelectedMonth]=useState("January");
-    const [selectedYear,setSelectedYear]=useState(2023);
+import { useState } from "react";
+import { generateDataOptions, categories } from "../../utils/DataRender";
+import "./FilterBox.css";
 
-    const monthToRender =()=>generateDataOptions(months)
+const FilterBox = ({ onFilter }) => {
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
-    const yearsToRender =()=>generateDataOptions(years)
+  const handleCategoryChange = (e) => {
+    const category = e.target.value;
+    setSelectedCategory(category);
+    onFilter(category, searchTerm); // Pass both category and search term to onFilter
+  };
 
-    const handleMonthChange=(e)=>{
-        setSelectedMonth(e.target.value)
-    }  
-    const handleYearChange=(e)=>{
-       setSelectedYear(Number(e.target.value))
-    } 
-   
-    useEffect(()=>{
-        const updateParent=()=>{
-            getMonthYear(selectedMonth,selectedYear)
-        }
-        updateParent()
-    },[selectedMonth,selectedYear,getMonthYear])
-    return(
-        <div>
-            <form className="filter-card">
-             <div className="wrapper">
-                <div className="date">
-                    <label htmlFor="month">Month : </label>
-                        <select
-                        value={selectedMonth}
-                        onChange={handleMonthChange}
-                        >
-                        {monthToRender()}
-                        </select>
-                </div>
-                <div className="date">
-                    <label htmlFor="year">Year : </label>
-                    <select
-                    value={selectedYear}
-                    onChange={handleYearChange}
-                    >
-                        {yearsToRender()}
-                    </select>
-               </div>
-               </div>
-             </form>
-           
-        </div>
-    )
-}
+  const handleSearchChange = (e) => {
+    const search = e.target.value;
+    setSearchTerm(search);
+    onFilter(selectedCategory, search); // Pass both category and search term to onFilter
+  };
+
+  return (
+    <div className="filter-box">
+      <label htmlFor="category">Category: </label>
+      <select
+        id="category"
+        value={selectedCategory}
+        onChange={handleCategoryChange}
+      >
+        <option value="">All Categories</option>{" "}
+        {/* Option to show all categories */}
+        {generateDataOptions(categories)}
+      </select>
+
+      <label htmlFor="search">Search: </label>
+      <input
+        type="text"
+        id="search"
+        value={searchTerm}
+        onChange={handleSearchChange}
+        placeholder="Search events..."
+      />
+    </div>
+  );
+};
+
 export default FilterBox;
