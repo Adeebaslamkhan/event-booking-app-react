@@ -1,9 +1,12 @@
-import React, { createContext, useContext, useState } from "react";
+
+
+
+import { createContext, useContext, useState } from "react";
+import PropTypes from "prop-types";
 
 const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
-
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -28,4 +31,9 @@ export const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
+};
+
+// Add propTypes for children
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired, // children can be any renderable content
 };
